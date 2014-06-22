@@ -1,0 +1,44 @@
+			<section id="blog">
+				
+				<div class="container inner">
+					<div class="row">
+						<div class="col-md-8 col-sm-9 center-block text-center">
+							<header>
+								<h1>Recent Blog Posts</h1>
+							</header>
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+				
+				<div class="container inner-bottom">
+					<div class="row">
+						<div class="col-sm-12 portfolio">
+							
+							<ul class="items col-4 gap">
+								{% for blog in collections.blogs %}
+								<li class="item thumb interactive">
+									<figure>
+									
+										<div class="icon-overlay icn-link">
+											<a href="/blog/{{blog.slug}}.html"><img class="img-thumbnail" src="/assets/images/blogs/{{blog.images[0].src}}" alt=""></a>
+										</div><!-- /.icon-overlay -->
+										
+										<figcaption class="bordered no-top-border">
+											<div class="info">
+												<span class="day">{{ moment(blog.date).format('DD')}}</span>
+												<span class="month">{{ moment(blog.date).format('MMM')}}</span>
+												<span class="month">{{ moment(blog.date).format('YYYY')}}</span>
+												<h4><a href="/blog/{{blog.slug}}.html">{{ blog.title }}</a></h4>
+												<p>{% for tag in blog.tags %}{{ tag }}{% endfor %}</p>
+											</div><!-- /.info -->
+										</figcaption>
+										
+									</figure>
+								</li><!-- /.item -->
+								{% endfor %}								
+							</ul><!-- /.items -->
+							
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</section>

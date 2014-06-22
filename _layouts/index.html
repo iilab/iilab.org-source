@@ -1,0 +1,17 @@
+{% extends "_layouts/base.html" %}
+{% block body %}
+{% include "_layouts/includes/header.html" %}
+		<main>
+			{% include "_layouts/includes/hero.html" %}
+			{% include "_layouts/includes/home/about.html" %}
+			{% include "_layouts/includes/home/work.html" %}
+			{% include "_layouts/includes/home/services.html" %}
+			{% include "_layouts/includes/home/team.html" %}
+			{% include "_layouts/includes/home/partners.html" %}
+			{% include "_layouts/includes/home/blog.html" %}
+			{% include "_layouts/includes/home/social.html" %}
+			{% include "_layouts/includes/home/contact.html" %}
+			{{ contents }}
+		</main>
+{% include "_layouts/includes/footer.html" %}
+{% endblock %}

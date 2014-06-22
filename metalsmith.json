@@ -1,0 +1,118 @@
+{
+  "source": "./_posts",
+  "destination": "./_site",
+  "plugins": {
+    "metalsmith-metaobject": {
+        "site" : {
+          "url": "iilab.org",
+          "title": "iilab",
+          "tagline": "Innovative Technology for Social Impact",
+          "subtitle": "information innovation lab",
+          "description": "We harness information innovation to help your social good initiatives improve their human impact.",
+          "contact": {
+            "email": "contact@iilab.org",
+            "phone": "+44 7429 144 691",
+            "address": "TECHHUB, 76-80 City Road, London EC1Y 2BJ - UK - Registered in England & Wales. Reg. No: 08332887"
+          }
+        },
+        "author": {
+            "name": "Jun Matsushita",
+            "github": "jmatsushita",
+            "email": "contact@iilab.org"
+        },
+        "favicon": "_assets/img/favico.png",
+        "icon": "_assets/img/favico.png",
+        "shortcut_icon": "_assets/img/favico.png",
+        "feed": "/atom.xml",
+        "social": {
+          "gplus": "https://plus.google.com/b/106011859086478758954/106011859086478758954",
+          "linkedin": "http://www.linkedin.com/company/iilab",
+          "github": "https://github.com/iilab",
+          "facebook": "http://www.facebook.com/iilab.org",
+          "twitter": "http://twitter.com/iilab",
+          "envelope": "mailto:contact@iilab.org"
+        },
+        "programs" : {
+          "access": "Access",
+          "security": "Security",
+          "decision": "Decision Support",
+          "collaboration": "Collaboration"
+        },
+        "persons" : {
+          "jun": {
+            "name": "Jun Matsushita",
+            "title": "CEO, Founder",
+            "description": "Jun has been advising international non-profits, humanitarian organisations and media organisations, in the use of innovation and technology for more than 16 years in Paris, New York and London. His technical expertise ranges from system and network administration, web and telephony platforms, to digital security and knowledge management.",
+            "twitter": "https://twitter.com/jmatsushita",
+            "linkedin": "http://www.linkedin.com/in/jmatsushita",
+            "github": "https://github.com/jmatsushita",
+            "site": "https://iilab.org"
+            },
+          "kat": {
+            "name": "Kat Austen",
+            "title": "Science and Design Lead",
+            "description": "Kat is a person. She’s interested in lots of things and phenomena, how things are connected, and why they are connected. She likes patterns but doesn’t have to have them. In the temporal melting-pot of her life so far she has been a scientist, an artist, a journalist and a writer. She welcomes a humane and environmentally kind future.",
+            "twitter": "https://twitter.com/katausten",
+            "linkedin": "http://de.linkedin.com/pub/kat-austen/4/579/216",
+            "github": "https://github.com/iamkat",
+            "site": "http://katausten.com"
+
+          },
+          "sam": {
+            "name": "Samuel Carlisle",
+            "title": "Hardware Engineering Lead",
+            "description": "Electronic Engineer, Activist, Hacker and Maker. #sukey #cryptoparty #hackspace #occupy #hurricanehackers.",
+            "twitter": "https://twitter.com/samthetechie",
+            "linkedin": "http://uk.linkedin.com/pub/samuel-carlisle/20/ba/248",
+            "github": "https://github.com/samthetechie",
+            "site": "http://samthetechie.blogspot.de"
+
+          }
+        },
+        "partners" : {
+          "atchai": {
+            "name": "Atchai",
+            "link": "http://www.atchai.com/"
+          },
+          "engineroom": {
+            "name": "The Engine Room",
+            "link": "https://www.theengineroom.org/"
+          },
+          "greenhost": {
+            "name": "Greenhost",
+            "link": "https://greenhost.net/"
+          },
+          "ipl": {
+            "name": "Internet Protection Lab",
+            "link": "http://www.internetprotectionlab.net/"
+          },
+          "gfmd": {
+            "name": "Global Forum for Media Development",
+            "link": "http://gfmd.info"
+          }
+       } 
+    },
+    "metalsmith-watch": {},
+    "metalsmith-drafts": {},
+    "metalsmith-markdown": {},
+    "metalsmith-more": {},
+    "metalsmith-collections": {
+      "blogs": {
+        "sortBy": "date",
+        "reverse": true
+      },
+      "projects": {
+        "sortBy": "date",
+        "reverse": true
+      }
+    },
+    "metalsmith-assets": {
+      "source": "_assets",
+      "destination": "assets"
+    },
+    "metalsmith-templates": {
+      "engine": "nunjucks",
+      "directory": "_layouts"
+    }
+  }
+}
