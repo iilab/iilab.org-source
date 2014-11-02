@@ -3,12 +3,15 @@ title: Tribulations in Open Collaboration, Part 1
 slug: 2014-06-03-tribulation-open-collaboration-part1
 date: 2014-06-03
 collection: news
+format: blog
 template: blog.html
 tags: open collaboration, collaborative writing, open source, tools
 author: jun
 images:
   - src: screen-shot-2014-06-03-at-223133.png
     caption:
+projects:
+  - open-droplet
 ---
 
 _This is the first part of a series on tools for open collaboration. This first part will focus on managing content in an open way with collaborative editing platforms. In the next posts we'll look at file sharing and document management, task management and communication tools._
@@ -60,7 +63,7 @@ In summary the features we are looking for are:
  
  - [Ethercalc](http://ethercalc.net/) - pictured below - is a bit clunky but improving over time, and the promising [Ethersheet](https://ethersheet.org) that still lacks features.
  
- ![Ethercal is simple and not very pretty...](/assets/images/blogs/screen-shot-2014-06-03-at-215510.png)
+ ![Ethercal is simple and not very pretty...](/assets/images/news/screen-shot-2014-06-03-at-215510.png)
 
  - [Substance](http://substance.io/composer/) shifted its focus to desktop document editing (when originally it was also looking at realtime web based collaboration. But I keep an eye on this one because its [technology fundamentals are great](https://github.com/substance)! 
 
@@ -70,15 +73,15 @@ In summary the features we are looking for are:
 
   - [Penflip](https://www.penflip.com) - which this blog post was prepared on, but doesn't allow for live editing by multiple users. However it allows to completely open text to external collaboration. It has "git" at its core and therefore also allows to do version control and offline working. It has some UX problems however, for instance comments are only attached to request for modifications of the text. Also saving is a two step process (committing and pushing) which can be confusing and can be forgotten.
 
- ![This blog post being edited on Penflip](/assets/images/blogs/screen-shot-2014-06-03-at-220144.png)
+ ![This blog post being edited on Penflip](/assets/images/news/screen-shot-2014-06-03-at-220144.png)
   
   - [Typewrite](https://typewrite.io/) - which does allow live editing but doesn't have document folders like Penflip, and doesn't allow to comment or integrate with a git workflow.
 
- ![Typewrite looks good and distraction free but lacks integration options](/assets/images/blogs/screen-shot-2014-06-03-at-220525.png)
+ ![Typewrite looks good and distraction free but lacks integration options](/assets/images/news/screen-shot-2014-06-03-at-220525.png)
 
   - [Stackedit](https://stackedit.io/) - which seems promising, connects to Google Docs and Dropbox while still using Markdown. Is able to publish to github. We might try this next since Penflips's overall UI is not fantastic.
   
- ![Stackedit is a bit cluttered and inelegant but is feature rich](/assets/images/blogs/screen-shot-2014-06-03-at-221941.png)
+ ![Stackedit is a bit cluttered and inelegant but is feature rich](/assets/images/news/screen-shot-2014-06-03-at-221941.png)
   
 # Conclusion
 

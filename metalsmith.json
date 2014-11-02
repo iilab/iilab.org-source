@@ -1,7 +1,9 @@
 {
   "source": "./_posts",
   "destination": "./_site",
+  "clean": false,
   "plugins": {
+    "metalsmith-debug": {},
     "metalsmith-metaobject": {
         "site" : {
           "url": "iilab.org",
@@ -12,7 +14,9 @@
           "contact": {
             "email": "contact@iilab.org",
             "phone": "+44 7429 144 691",
-            "address": "TECHHUB, 76-80 City Road, London EC1Y 2BJ - UK - Registered in England & Wales. Reg. No: 08332887"
+            "address1": "iilab London<br> Unit 36, 88-90 Hatton Garden<br> London EC1N 8PN - United Kingdom",
+            "address2": "iilab Berlin<br> Thinkfarm Berlin, Oranienstraße 183, Aufgang C, 3. OG<br>10999 Berlin - Germany",
+            "registration": "Registered in England & Wales. <br> Reg. No: 08332887. VAT No: GB172453217"
           }
         },
         "author": {
@@ -31,7 +35,7 @@
           "facebook": "http://www.facebook.com/iilab.org",
           "twitter": "http://twitter.com/iilab",
           "envelope": "mailto:contact@iilab.org"
-        },
+        },  
         "programs" : {
           "access": "Access",
           "security": "Security",
@@ -50,23 +54,57 @@
             },
           "kat": {
             "name": "Kat Austen",
-            "title": "Science and Design Lead",
+            "title": "Head of Research and Design",
             "description": "Kat is a person. She’s interested in lots of things and phenomena, how things are connected, and why they are connected. She likes patterns but doesn’t have to have them. In the temporal melting-pot of her life so far she has been a scientist, an artist, a journalist and a writer. She welcomes a humane and environmentally kind future.",
             "twitter": "https://twitter.com/katausten",
             "linkedin": "http://de.linkedin.com/pub/kat-austen/4/579/216",
             "github": "https://github.com/iamkat",
             "site": "http://katausten.com"
 
+          }
+        },
+        "person_contributors": {
+          "alex": {
+            "name": "Alex Shure",
+            "description": "Alex Shure is a skilled craftsman and inventor active in the field of open source hardware within many different projects. As a human-nerd-interactor he pushes open source beyond the world of software - to infinity and beyond, starting with Open Source Ecology Germany and the Open it Agency.",
+            "site": "http://etemu.com/",
+            "twitter": "https://twitter.com/AlexShure",
+            "github": "https://github.com/aShure",
+            "projects": [
+                "open-droplet"
+            ],
+            "affiliations": {
+              "Open Source Ecology Germany": "http://opensourceecology.de/",
+              "Open it agency": "http://openitagency.eu/"
+            }
+          },
+          "elf": {
+            "name": "elf Pavlik",
+            "description": "#hacker / #elf - living strictly #moneyless and #stateless already for over 5 years! @hackers4peace @polyeconomy #WorldPeaceGame #ZeroWaste",
+            "site": "http://etemu.com/",
+            "twitter": "https://twitter.com/AlexShure",
+            "github": "https://github.com/elf-pavlik",
+            "projects": [
+                "open-oil-framework"
+            ],
+            "affiliations": {
+              "Hackers4peace": "http://hackers4peace.net/",
+              "PolyEconomy": "http://polyeconomy.info/"
+            }
           },
           "sam": {
-            "name": "Samuel Carlisle",
-            "title": "Hardware Engineering Lead",
-            "description": "Electronic Engineer, Activist, Hacker and Maker. #sukey #cryptoparty #hackspace #occupy #hurricanehackers.",
-            "twitter": "https://twitter.com/samthetechie",
-            "linkedin": "http://uk.linkedin.com/pub/samuel-carlisle/20/ba/248",
-            "github": "https://github.com/samthetechie",
-            "site": "http://samthetechie.blogspot.de"
-
+            "name": "Sam Muirhead",
+            "twitter": "https://twitter.com/cameralibre",
+            "github": "https://github.com/samoos",
+            "description": "I make all sorts of videos – but I have a focus on using, explaining and promoting Free/Libre/Open Source Software, Free Culture, Open Knowledge and Open Source Hardware. In 2012/13 I lived a Year of Open Source, I’m part of the Open It Agency, and I also run post-production workshops with free software!",
+            "site": "http://cameralibre.cc/",
+            "projects": [
+                "open-droplet"
+            ],
+            "affiliations": {
+              "Year Of Open Source": "http://yearofopensource.net ",
+              "Open it agency": "http://openitagency.eu/"
+            }
           }
         },
         "partners" : {
@@ -82,6 +120,10 @@
             "name": "Greenhost",
             "link": "https://greenhost.net/"
           },
+          "resurgence": {
+            "name": "Resurgence",
+            "link": "http://resurgence.io"
+          },
           "ipl": {
             "name": "Internet Protection Lab",
             "link": "http://www.internetprotectionlab.net/"
@@ -89,15 +131,20 @@
           "gfmd": {
             "name": "Global Forum for Media Development",
             "link": "http://gfmd.info"
-          }
+          }          
+       },
+       "icons": {
+        "blog": "edit",
+        "social": "quote",
+        "link": "link",
+        "tech": "tools"
        } 
     },
-    "metalsmith-watch": {},
     "metalsmith-drafts": {},
     "metalsmith-markdown": {},
     "metalsmith-more": {},
     "metalsmith-collections": {
-      "blogs": {
+      "news": {
         "sortBy": "date",
         "reverse": true
       },
@@ -106,9 +153,13 @@
         "reverse": true
       }
     },
-    "metalsmith-assets": {
-      "source": "_assets",
-      "destination": "assets"
+    "metalsmith-paginate": {
+        "perPage": 10,
+        "path": ":collection"
+    },
+    "metalsmith-static": {
+      "src": "_assets",
+      "dest": "assets"
     },
     "metalsmith-templates": {
       "engine": "nunjucks",

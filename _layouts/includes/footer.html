@@ -35,15 +35,17 @@
 						<h4>Get In Touch</h4>
 						<p>{{ contact.description }}</p>
 						<ul class="contacts">
-							<li><i class="icon-location contact"></i> {{ site.contact.address }}</li>
-							<li><a href="#"><i class="icon-mail-1 contact"></i> {{ site.contact.email }}</a></li>
+							<li><a href="mailto:{{ site.contact.email }}"><i class="icon-mail-1 contact"></i> {{ site.contact.email }}</a></li>
+							<li><i class="icon-location contact"></i> {{ site.contact.address1 }}</li>
+							<li><i class="icon-location contact"></i> {{ site.contact.address2 }}</li>
+							<li><i class="icon-info contact"></i> {{ site.contact.registration }}</li>
 						</ul><!-- /.contacts -->
 					</div><!-- /.col -->
 					
 					<div class="col-md-3 col-sm-6 inner">
 						<h4>Stay in touch</h4>
 						<p>Receive updates about our projects.</p>
-						<form id="newsletter" class="form-inline newsletter" role="form" action="http://iilab.us4.list-manage.com/subscribe/post" method="POST">
+						<form id="newsletter" class="form-inline newsletter" role="form" action="https://iilab.us4.list-manage.com/subscribe/post" method="POST">
 							<input type="hidden" name="u" value="c026c6b05afa24ee6d7fb3626">
 							<input type="hidden" name="id" value="a218f30db9">
 

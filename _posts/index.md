@@ -1,5 +1,5 @@
 ---
-title: iilab
+title: Innovative Technology for Social Impact
 date: 2012-08-20
 template: index.html
 hero:
@@ -24,4 +24,7 @@ work:
 team:
   title: Our Team
   description: We harness multi-disciplinarity, systems and design thinking to create services and products that improve the lives of citizens.
+contributors:
+  title: Our Contributors
+  description: We are stronger because we're part of the open source community. We're working with passionate and visonary developers, designers and thinkers from the open source and free culture movements.  
 ---

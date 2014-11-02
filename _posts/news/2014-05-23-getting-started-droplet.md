@@ -2,7 +2,8 @@
 title: Getting started on Droplet - An Open Hardware Water Flow Metre
 slug: 2014-05-23-getting-started-droplet
 date: 2014-05-23
-collection: blogs
+collection: news
+format: blog
 template: blog.html
 project: droplet
 program: access
@@ -19,6 +20,8 @@ images:
     caption: 
   - src: droplet-schematics.jpg
     caption: 
+projects:
+  - open-droplet
 ---
 
 Water is one of the [world’s most stressed resources](https://www.un.org/waterforlifedecade/scarcity.shtml). Usage has shot up by more than double the rate of population increase, meaning we are guzzling more water per head than ever before.
@@ -47,7 +50,7 @@ The citizen science element comes in if you do share your data. Shared data will
 <figure>
 	<div class="row">
 		<div class="col-sm-6 col-sm-push-6">
-			<img src="/assets/images/blogs/droplet-bike.jpg" alt="">
+			<img src="/assets/images/news/droplet-bike.jpg" alt="">
 		</div><!-- /.col -->		
 		<div class="col-sm-6 col-sm-pull-6">
 			<figcaption>

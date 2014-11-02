@@ -60,6 +60,98 @@
 				
 			</section>
 
+			{% set isNews = false %}
+			{% for item in collections.news %}
+				{% if ((item.projects) and (slug in (item.projects))) %}
+					{% set isNews = true %}
+				{% endif %}
+			{% endfor %}
+
+			{% if (isNews) %}
+			<section id="blog" class="light-bg">
+				<div class="container inner inner-bottom inner-bottom-sm">
+					<div class="row">
+						<div class="col-md-8 col-sm-9 center-block text-center">
+							<header>
+								<h1>Recent News about {{ title }}</h1>
+							</header>
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+
+				<div class="container inner-top-sm inner-top">
+					
+					<div class="row">
+						<div class="col-sm-12">
+							
+							<div class="grid-blog col-3 no-sidebar">
+								<div class="posts">
+
+								{% for item in collections.news %}
+									{% if ((item.projects) and (slug in (item.projects))) %}
+									
+									<div class="post format-{{ item.format }}">
+										
+										<div class="post-content">
+											{% if item.images %}
+											<div class="owl-news owl-carousel owl-inner-pagination owl-inner-nav post-media">
+												
+												{% for img in item.images %}
+												<div class="item">
+													<figure>
+														<img src="/assets/images/news/{{img.src}}" alt="">
+													</figure>
+												</div><!-- /.item -->
+												{% endfor %}
+												
+											</div><!-- /.owl-carousel -->
+
+											{% endif %}
+											{% if item.format == "blog" %}
+											<h2 class="post-title">
+												<a href="/news/{{item.slug}}.html">{{ item.title }}</a>
+											</h2>
+											{% else %}
+												{% if item.link %}
+												<h2 class="post-title">
+													<a href="{{item.link}}">{{ item.title }}</a>
+												</h2>
+												{% endif %}
+											{% endif %}
+
+											<ul class="meta">
+												<li class="date">{{ moment(item.date).format('MMM')}} {{ moment(item.date).format('DD')}}, {{ moment(item.date).format('YYYY')}}</li>
+												{% if item.tags %}<li class="categories">{% for tag in item.tags %}{{ tag }}{% endfor %}{% endif %}</li>
+												{% if item.link %}<li class="link"><a href="{{ item.link }}">{{ item.link|truncate(40) }}</a></li>{% endif %}
+											</ul><!-- /.meta -->
+											
+											<p>{{ item.less }}</p>
+											
+											{% if item.format == "blog" %}
+											<a href="/news/{{item.slug}}.html" class="btn">Read more</a>
+											{% else %}
+												{% if item.link %}
+												<a href="{{item.link}}" class="btn">Read more</a>
+												{% endif %}
+											{% endif %}
+																																	
+										</div><!-- /.post-content --> 
+										
+									</div><!-- /.post -->
+									{% endif %}	
+								{% endfor %}								
+							
+								</div><!-- /.posts -->
+							</div><!-- /.grid-blog -->
+							
+							
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+					
+				</div><!-- /.container -->
+			</section>
+			{% endif %}
+				
 			<section id="get-in-touch">
 				<div class="container inner">
 					<div class="row">

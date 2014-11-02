@@ -13,7 +13,7 @@
 					<div class="row inner-top-sm text-center">
 					
 					{% for key, person in persons %}	
-						<div class="col-sm-4 inner-bottom-sm inner-left inner-right">
+						<div class="col-sm-4 {{ "col-sm-offset-2" if (loop.index == 1) }} inner-bottom-sm inner-left inner-right">
 							<figure class="member">
 								
 								<div class="">
