@@ -43,8 +43,6 @@ I would love to extend the dialogue around these issues, and  to have explored m
 *   How do we facilitate community water stewardship through interface and sensor design?
 
 
-## Other News:
-
-First meeting with the UCL Students
+## First meeting with the UCL Students
 
 Last month I had the pleasure to meet up in person with the students from Sarah Bell's MSc Environmental Systems Engineering at UCL. Our team consists of Florian Abiteboul, Shanshan Tang, Cecilia Li, and Shibei Cheng and Anita Ponnathpore and it was a great first meeting. Having introduced the project, I've asked them to start off with the background research for a protocol to rapidly categorise cities in terms of their water infrastructure in order to see where Open Droplet's approach might be most effective. When we meet this month, we'll be handing over plans from the industrial research so that the students can then test calibration and flow detection in UCL's toilets and showers.
